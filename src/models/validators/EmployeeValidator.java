@@ -36,7 +36,7 @@ public class EmployeeValidator {
         }
 
         if(code_duplicate_check_flag){
-            EntityManager em = DBUtil.createEntitymanager();
+            EntityManager em = DBUtil.createEntityManager();
             long employees_count = (long)em.createNamedQuery("checkResisterCode", Long.class)
                     .setParameter("code", code).getSingleResult();
             em.close();
