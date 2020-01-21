@@ -27,7 +27,7 @@ import javax.persistence.Table;
             ),
     @NamedQuery(
             name = "checkLoginCodeAndPassword",
-            query = "select e from Employee as e where e.delete_flag = 0 and e.code = :code and e.password = :password"
+            query = "select e from Employee as e where e.delete_flag = 0 and e.code = :code and e.password = :pass"
             )
 })
 @Entity
